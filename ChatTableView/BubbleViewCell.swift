@@ -12,14 +12,16 @@ enum BubbleSide {
     case right
 }
 
-class RightBubbleViewCell: FlippedTableViewCell {
+class BubbleViewCell: FlippedTableViewCell {
     // MARK: - Properties
     private let minimumEmptySpacing: CGFloat = 56
     private let leftBubbleColor: UIColor = .systemGray6
     private let rightBubbleColor: UIColor = .systemGreen.withAlphaComponent(0.1)
 
-    var bubbleSide: BubbleSide {
-        return .right
+    var bubbleSide: BubbleSide = .left {
+        didSet {
+            updateSide()
+        }
     }
     
     // MARK: - UI
@@ -134,11 +136,5 @@ class RightBubbleViewCell: FlippedTableViewCell {
             leftSpacer.isHidden = true
             senderLabel.isHidden = false
         }
-    }
-}
-
-class LeftBubbleViewCell: RightBubbleViewCell {
-    override var bubbleSide: BubbleSide {
-        return .left
     }
 }

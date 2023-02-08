@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		86028B7E298B148100519893 /* FlippedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86028B7D298B148100519893 /* FlippedTableView.swift */; };
 		86028B80298B190100519893 /* FlippedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86028B7F298B190100519893 /* FlippedTableViewCell.swift */; };
-		86028B82298B195A00519893 /* RightBubbleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86028B81298B195A00519893 /* RightBubbleViewCell.swift */; };
+		86028B82298B195A00519893 /* BubbleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86028B81298B195A00519893 /* BubbleViewCell.swift */; };
 		86028B84298B356600519893 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86028B83298B356600519893 /* Message.swift */; };
 		86028B86298B621E00519893 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86028B85298B621E00519893 /* TextFieldView.swift */; };
 		863DE6B2298B12F4004A55B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DE6B1298B12F4004A55B5 /* AppDelegate.swift */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		86028B7D298B148100519893 /* FlippedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedTableView.swift; sourceTree = "<group>"; };
 		86028B7F298B190100519893 /* FlippedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedTableViewCell.swift; sourceTree = "<group>"; };
-		86028B81298B195A00519893 /* RightBubbleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightBubbleViewCell.swift; sourceTree = "<group>"; };
+		86028B81298B195A00519893 /* BubbleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleViewCell.swift; sourceTree = "<group>"; };
 		86028B83298B356600519893 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		86028B85298B621E00519893 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		863DE6AE298B12F4004A55B5 /* ChatTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +71,7 @@
 				863DE6B5298B12F4004A55B5 /* ChatViewController.swift */,
 				86028B7D298B148100519893 /* FlippedTableView.swift */,
 				86028B7F298B190100519893 /* FlippedTableViewCell.swift */,
-				86028B81298B195A00519893 /* RightBubbleViewCell.swift */,
+				86028B81298B195A00519893 /* BubbleViewCell.swift */,
 				86028B85298B621E00519893 /* TextFieldView.swift */,
 				86028B83298B356600519893 /* Message.swift */,
 				863DE6B7298B12F4004A55B5 /* Main.storyboard */,
@@ -153,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86028B82298B195A00519893 /* RightBubbleViewCell.swift in Sources */,
+				86028B82298B195A00519893 /* BubbleViewCell.swift in Sources */,
 				86028B7E298B148100519893 /* FlippedTableView.swift in Sources */,
 				86028B86298B621E00519893 /* TextFieldView.swift in Sources */,
 				86028B80298B190100519893 /* FlippedTableViewCell.swift in Sources */,

@@ -18,8 +18,7 @@ class ChatViewController: UIViewController {
         view.delegate = self
         view.dataSource = self
         view.rowHeight = UITableView.automaticDimension
-        view.register(RightBubbleViewCell.self, forCellReuseIdentifier: "RightBubbleViewCell")
-        view.register(LeftBubbleViewCell.self, forCellReuseIdentifier: "LeftBubbleViewCell")
+        view.register(BubbleViewCell.self, forCellReuseIdentifier: "BubbleViewCell")
         return view
     }()
     
@@ -79,22 +78,19 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
-        if message.isSender {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RightBubbleViewCell", for: indexPath) as? RightBubbleViewCell else {
-                return UITableViewCell()
-            }
-            cell.messageLabel.text = message.text
-            cell.timeLabel.text = message.time
-            return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "LeftBubbleViewCell", for: indexPath) as? LeftBubbleViewCell else {
-                return UITableViewCell()
-            }
-            cell.senderLabel.text = message.senderName
-            cell.messageLabel.text = message.text
-            cell.timeLabel.text = message.time
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BubbleViewCell", for: indexPath) as? BubbleViewCell else {
+            return UITableViewCell()
         }
+        cell.messageLabel.text = message.text
+        cell.senderLabel.text = message.senderName
+        cell.timeLabel.text = message.time
+        
+        if message.isSender {
+            cell.bubbleSide = .right
+        } else {
+            cell.bubbleSide = .left
+        }
+        return cell
     }
 }
 
